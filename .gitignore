@@ -62,4 +62,4 @@ typings/
 
 trips.json
 
-/models/connection.js
+models/connection.js
