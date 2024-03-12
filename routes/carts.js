@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
     const trip = {
         departure : req.body.departure,
         arrival : req.body.arrival,
-        date : req.body.date,
+        hour : req.body.hour,
         price : req.body.price,
     }
     //Enregistre le trajet dans le panier
