@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     const trip = {
         departure : req.body.departure,
         arrival : req.body.arrival,
-        hour : req.body.hour,
+        date : req.body.date,
         price : req.body.price,
         isBook: req.body.isBook
     }

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cartSchema = mongoose.Schema({
     departure: String,
     arrival: String,
-    hour: String,
+    date: Date,
     price: Number,
     isBook: {
         type: Boolean,
