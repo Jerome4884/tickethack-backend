@@ -63,3 +63,6 @@ typings/
 trips.json
 
 models/connection.js
+models/connection.js
+package.json
+yarn.lock

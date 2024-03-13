@@ -40,7 +40,7 @@ router.delete('/:id', (req, res) => {
 // Passer les trajets du panier en isBook : true
 router.put('/', (req, res) => {
     Cart.updateMany({}, { isBook: true }).then(cart => {
-        res.json({ result: true, message: 'Les trajets on été reséervé' });
+        res.json({ result: true, message: 'Les trajets on été resérvé' });
     })
 });
 
