@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Cart = require('../models/carts');
 
+//Ajoute le trajet dans le panier
 router.post('/', (req, res) => {
     const trip = {
         departure : req.body.departure,
@@ -11,13 +12,14 @@ router.post('/', (req, res) => {
         price : req.body.price,
         isBook: req.body.isBook
     }
-    //Enregistre le trajet dans le panier
+
     const newCart = new Cart(trip)
     newCart.save().then(newCart => {
         res.json({ result: true, newCart: newCart });
     });
 });
 
+// récupérer tous les trajets du panier
 router.get('/', (req, res) => {
     Cart.find().then(cart => {
         if(cart[0]) {
@@ -28,6 +30,7 @@ router.get('/', (req, res) => {
     })
 });
 
+// Supprime un trajet du panier
 router.delete('/:id', (req, res) => {
     Cart.deleteOne({ _id: req.params.id }).then(() => {
         res.json({result: true, message: 'Trajet supprimé'})
